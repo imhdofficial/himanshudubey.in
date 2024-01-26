@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Himanshu Dubey</title>
+        <link rel="shortcut icon" href="public/img/dark_h_logo.svg" type="image/x-icon">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Amita:wght@400;700&display=swap" rel="stylesheet">
+        <style>
+            .amitaFont{
+                font-family: 'Amita', serif;
+            }
+            body{
+                background-color: #0C003B;
+                display: flex;
+                flex-direction: column;
+                min-height: 100vh;
+                position: relative;
+                z-index: 2;
+            }
+            header{
+                background-color: #150067;
+                padding: 12px 0;
+                box-shadow: 0px 4px 14px 4px rgba(255, 255, 255, 0.09);
+                z-index: 3;
+            }
+            .headerItems{
+                display: flex;
+                justify-content: start;
+            }
+            .logo{
+                height: 39px;
+            }
+            .soonTitle{
+                font-size: 5rem;
+                font-weight: 700;
+                text-align: center;
+            }
+            .socialIconsList{
+                display: flex;
+                justify-content: center;
+                flex-wrap: wrap;
+            }
+            .socialIcons{
+                height: 162px;
+                transition: ease 1s;
+            }
+            .socialIcons:hover{
+                transform: scale(1.2);
+            }
+            .centerPos{
+                position: relative;
+                top: 0;
+                bottom: 0;
+                margin-top: auto;
+            }
+            /* ------------------------------------------ */
+            .star {
+                position: absolute;
+                width: 1px; /* Minimum width */
+                height: 1px; /* Minimum height */
+                background-color: #fff;
+                border-radius: 50%;
+                opacity: 0;
+                animation: blinkStars 2s infinite alternate, sizeChange 5s infinite alternate;
+            }
+
+            @keyframes blinkStars {
+                0% {
+                    opacity: 0;
+                }
+                50% {
+                    opacity: 1;
+                }
+                100% {
+                    opacity: 0;
+                }
+            }
+
+            @keyframes sizeChange {
+                0% {
+                    transform: scale(1);
+                }
+                50% {
+                    transform: scale(1.5); /* Adjust the maximum size */
+                }
+                100% {
+                    transform: scale(1);
+                }
+            }
+            /* ------------------------------------------ */
+            @media only screen and (max-width: 767px) {
+                .socialIcons {
+                    height: 100px;
+                }
+            }
+        </style>
+    </head>
+    <body class="amitaFont text-white">
+        <header>
+            <div class="container">
+                <div class="headerItems">
+                    <a href="/"><img src="public/img/himanshu_logo.svg" alt="" class="logo"></a>
+                </div>
+            </div>
+        </header>
+        <div class="container my-auto">
+            <div class="centerPos">
+                <h1 class="soonTitle">Coming Soon...</h1>
+                <div class="socialIconsList">
+                    <a href="https://www.instagram.com/im_hd_official" class="" target="_blank"><img src="public/img/instagram.svg" alt="Instagram" class="socialIcons"></a>
+                    <a href="https://www.facebook.com/himanshu.dubey.92102" class="" target="_blank"><img src="public/img/facebook.svg" alt="Facebook" class="socialIcons"></a>
+                    <a href="https://x.com/im_hd_official?s=21" class="" target="_blank"><img src="public/img/x.svg" alt="X" class="socialIcons"></a>
+                    <a href="https://in.linkedin.com/in/imhdofficial" class="" target="_blank"><img src="public/img/linkedin.svg" alt="Linkedin" class="socialIcons"></a>
+                    <a href="https://t.snapchat.com/bDbWkElQ" class="" target="_blank"><img src="public/img/snapchat.svg" alt="Snapchat" class="socialIcons"></a>
+                </div>
+            </div>
+        </div>
+        <div class="star"></div>
+        
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+        <script>
+            function createStar() {
+                const star = document.createElement('div');
+                star.classList.add('star');
+
+                const x = Math.random() * window.innerWidth;
+                const y = Math.random() * window.innerHeight;
+
+                star.style.left = `${x}px`;
+                star.style.top = `${y}px`;
+
+                // Introduce a random delay for each star
+                const delay = Math.random() * 5; // Adjust the maximum delay as needed
+                star.style.animationDelay = `${delay}s`;
+
+                document.body.appendChild(star);
+            }
+
+            function createStars() {
+                for (let i = 0; i < 200; i++) {
+                    createStar();
+                }
+            }
+
+            createStars();
+
+
+        </script>
+    </body>
+</html>
